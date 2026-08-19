@@ -1,12 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const dataPublicacao = document.getElementById("data-publicacao");
+    const elementoData = document.getElementById("data-publicacao");
 
-    // Data definida para a publicação da notícia
-    const data = new Date(2026, 7, 19);
+    const dataPublicacao = new Date(2026, 7, 19);
 
-    const dia = String(data.getDate()).padStart(2, "0");
-    const mes = String(data.getMonth() + 1).padStart(2, "0");
-    const ano = data.getFullYear();
+    const dia = String(dataPublicacao.getDate()).padStart(2, "0");
+    const mes = String(dataPublicacao.getMonth() + 1).padStart(2, "0");
+    const ano = dataPublicacao.getFullYear();
 
-    dataPublicacao.textContent = `${dia}/${mes}/${ano}`;
+    elementoData.textContent = `${dia}/${mes}/${ano}`;
 });
